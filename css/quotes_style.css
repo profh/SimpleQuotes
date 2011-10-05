@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	
+	/* DEFAULT TEXT SETTINGS HERE */
+	font-family: Verdana, Arial, Sans-serif;
+	font-size: 14px;
+	
+}
+
+#wrap {
+	width:900px;
+	margin:0 auto;
+	padding:0;
+}
+
+#header {
+	height:160px;
+}
+
+#header a:hover {
+	text-decoration: none;
+}
+
+
+#body {
+	margin:0 15px;
+	padding:15px;
+}
+
+
+#footer {
+	margin:0;
+	padding:10px 15px 5px 15px;
+	text-align:center;
+	font-size: 93%;
+}
+
+#copy {
+	margin: 5px auto;
+	color:black;
+	text-align:center;
+	font-size:85%;
+}
+
+#copy a {
+	color: #666;
+	text-decoration: none;
+}
+
+#copy a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+
+
+
+/********** MISC TEXT ********/
+
+h1 {
+	 /* SET H1 STYLE HERE */
+	font-size: 180%;
+	font-weight: bold;
+}
+
+h2 {
+	color:#000000;
+	font-style:italic;
+	font-size:120%;
+	text-align:center;
+}
+
+label {
+	font-size:95%;
+	font-family:Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+a:link {
+	color: #666; 
+	text-decoration:none;
+}
+
+a:visited {
+	color:#666; 
+	text-decoration:none;
+}
+
+a:hover {
+	color: #7f7f7f;
+	text-decoration:underline;
+}
+
+
+
+/********** TABLE FORMATTING ********/
+table {
+	border-collapse:collapse;
+}
+
+thead {
+	background-color: #000;
+	color: #FFF;
+}
+
+.alt {
+	background-color: #E6E6E6;
+}
+.reg {
+	background-color: #FFF;
+}
+
+
+
+/********** MISC FORMATTING ********/
+
+.error {
+  color: red;
+}
+
+.notice {
+  color: green;
+}
+
+.supertiny {
+	font-size:5px;
+}
