@@ -107,9 +107,13 @@
 			$db = new DB();
 			if (!$db->Open()) { return FALSE; }
 
-			$text = $db->makeSafe($this->text);
-			$author = $db->makeSafe($this->author);
-			$active = $db->makeSafe($this->active);
+			// $text = $db->makeSafe($this->text);
+			// $author = $db->makeSafe($this->author);
+			// $active = $db->makeSafe($this->active);
+			
+			$text = $db->keepUnsafe($this->text);
+			$author = $db->keepUnsafe($this->author);
+			$active = $db->keepUnsafe($this->active);
 
 			#  Insert into database
 

@@ -7,6 +7,7 @@ include_once ("includes/lib/db_connect.php");
 include_once ("includes/lib/validate.php");
 include_once ("includes/lib/forms.php");
 include_once ("includes/lib/login.php");
+include_once ("includes/lib/validation.php");
 
 
 #   Create instance of DB to work with

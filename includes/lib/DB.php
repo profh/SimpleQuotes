@@ -103,6 +103,22 @@ public function makeSafe($var) {
 	
 }  #  end of makeSafe()
 
+#  -----------------------------
+#    FUNCTION: KEEP UNSAFE
+
+public function keepUnsafe($var) {
+/**
+ *  This fn preps a string for insertion into the db
+ */
+	if($var === null) { return "NULL"; }
+	else { 
+		#  trim and add single quotes
+		$revised = "'" . $var . "'";
+		return $revised; 
+	}
+	
+}  #  end of keepUnsafe()
+
 
 #  -----------------------------
 #    FUNCTION: FROM DB
@@ -541,17 +557,18 @@ public function insertRecord($user_query) {
 	}
 
 	#   Check the query to make sure it is an INSERT query
+	// if (preg_match('/^INSERT INTO[A-Za-z0-9 ]+\)$/', $user_query)) {
+	//    		$tested_query = $user_query;
+	//    		# echo "<BR><BR>Insert query is: $tested_query<BR><BR>";
+	// }
 	
-	if (preg_match('/^INSERT INTO[^;]+\)$/', $user_query)) {
-   		$tested_query = $user_query;
-   		# echo "<BR><BR>Insert query is: $tested_query<BR><BR>";
-	}
+	$tested_query = $user_query;
 	
-	else {   #  was not an appropriate query
-		$errno = 9;
-		# $this->print_errors($errno);
-		return FALSE;
-	}
+	// else {   #  was not an appropriate query
+	// 	$errno = 9;
+	// 	# $this->print_errors($errno);
+	// 	return FALSE;
+	// }
 	
 	#   Execute the query
 		@$Result = mysql_query($tested_query, $Link);
