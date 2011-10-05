@@ -1,6 +1,7 @@
 <?php
 		# include some basic lib files
     include ("includes/lib/arrays.php");
+		include ("includes/lib/validation.php");
 		include ("includes/lib/forms.php");
     include ("includes/lib/form_controls/textbox.php");
 		include ("includes/lib/db_connect.php");
@@ -18,7 +19,8 @@
 			
 			# create a new instance of quotes to work with and set values
 			$quote = new Quote();
-			$quote->setText($text);
+			$filtered = Validate::filterXSS($text);
+			$quote->setText($filtered);
 			$quote->setAuthor($author);
 			
 			# try to save quote to the database and inform user
